@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<c3p0-config>
+    <!-- C3P0会默认加载Classpath路径下的c3p0-config.xml文件并读取默认的配置default-config -->
+    <!-- 默认配置 -->
+    <default-config>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/javamail-demo</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
+    </default-config>
+
+    <!-- 其他配置 -->
+    <!-- 需要在实例化c3p0对象时new ComboPooledDataSource("demo"); 来调用该配置 -->
+    <name-config name="demo">
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/javamail-demo</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
+    </name-config>
+</c3p0-config>
